@@ -1,45 +1,104 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Smooth-ez</h1>
 
-Welcome USER_NAME,
+### INSERT RESPONSIVE IMAGE OF DESKTOP TABLE MOBILE HERE
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This website/project is the third Milestone Project in the Full Stack Web Development Programme at the Code Institute.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Table of Contents
 
-`python3 -m http.server`
+**<details><summary>Project Overview</summary>**
+* [**Project Overview**](#project-overview)
+* [**User Stories**](#user-stories)
+    -   [**Guest User**](#guest-user)
+    -   [**Registered User**](#registered-user)
+    -   [**Administration User**](#Administration-user)
+</details>
 
-A blue button should appear to click: *Make Public*,
+**<details><summary>UX</summary>**
+* [**1.1 Strategy Plane**](#strategy-plane)
+* [**1.2 Scope Plane**](#scope-plane)
+* [**1.3 Structure Plane**](#structure-plane)
+* [**1.4 Skeleton Plane**](#skeleton-plane)
+* [**1.5 Surface Plane**](#surface-plane)
+    </details>
 
-Another blue button should appear to click: *Open Browser*.
+**<details><summary>Design Choices</summary>**
+* [**Fonts**](#fonts)
+* [**Icons**](#icons)
+* [**Colors**](#colors)</details>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**<details><summary>Features</summary>**
+* [**Existing Features**](#existing-features)
+* [**Remaining Features Still to Implement**](#remaining-features-still-to-implement)
+</details>
 
-A blue button should appear to click: *Make Public*,
+**<details><summary>Technologies Used</summary>**
+* [**Libraries**](#libraries)
+* [**Version Control**](#version-control)
+</details>
 
-Another blue button should appear to click: *Open Browser*.
+**<details><summary>Deployment</summary>**
+* [**Deployment**](#deployment)
+</details>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**<details><summary>Testing</summary>**
+* [**Testing**](#testing)</details>
 
-## Updates Since The Instructional Video
+**<details><summary>Credits</summary>**
+* [**Content**](#content)
+* [**Acknowledgements**](#acknowledgements)</details>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Project Overview
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+With people leading a far busier life these days a lot of people tend to skip a lot of nutrition in their
+diet as a result of not having enough time.  Consumption of smoothies that come in all forms of ingredients
+allows individuals to pack as much healthy food in to their diet in the shortest period of time.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+"Smooth-ez" is a smoothie recipe website for individuals who seek to maximise the healthy benefits of fruit
+and vegetables in the form of quick and easy drink that can be consumed on the go. This webiste will allow
+individuals to search for inspiration from other users around the world in addition to posting their own recipes
+for other members to use.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## User Stories
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+####  Guest User
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+*   I would like to locate this website when I am searching for smoothie drinks and recipes.
+*   I would like to be able to create a user profile and delete all records when no the profile is no longer used or required.
+*   I would like to access the website from different (mobile) devices easily.
+*   I would like to learn the health benefits of what the variety of smoothies have to offer.
+*   I would like to contribute and add recipes of my own to share my experiences.
+*   I would like to investigate further aspects to the site on the social media links.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+####  Registered User
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+*   As a registered user, I would like to be able to login to the website using the details I submitted when I registered.
+*   I would like to avail of the ability to create and add smoothie recipes on to the site for other users to use.
+*   I would like to be able to search for other recipes.
+*   I would like to be able to create a new recipe for other users to avail of.
+*   I would like to be able to read the entries submitted by other users.
+*   I would likek to update any smoothie recipes I enter.
+*   I would like to be able to delete the smoothie recipes I have entered.
 
---------
+####  Administration User
 
-Happy coding!
+*   As an Administrator I require access to delete or amend recipes entered by other site users.
+*   I would like to be able to create or remove smoothie recipes as the site grows.
+*   I would like to be able to delete or remove any obsolete accounts that are no longer in use.
+
+---
+
+# UX
+
+### Strategy Plane
+
+-   "Smooth-ez" will provide a forum for users to come view a variety of healthy recipes already logged to the site.  They will have the 
+ability then to register and create an account on the site to add and edit their own recipes.  There will be a function for users to save
+recipes which will provide them with a resource to extract and save the recipes on the site that appeal to them.
+
+### Scope Plane
+
+-   The objective of the Smooth-ez site is to keep content minimal at the start to avoid or minimise scope creep and stick to the fundamental
+purpose of what the site is for.  The site will be simplistic in it's layout and easy to navigate.  When users choose to upload their own submissions
+they will not be overwhelmed with content and will also have the option to include a url with an image of their drink.
