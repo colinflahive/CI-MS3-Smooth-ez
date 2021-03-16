@@ -87,6 +87,7 @@ for other members to use.
 *   I would like to be able to create or remove smoothie recipes as the site grows.
 *   I would like to be able to delete or remove any obsolete accounts that are no longer in use.
 
+##### [back to top](#table-of-contents)
 ---
 
 # UX
@@ -102,3 +103,27 @@ recipes which will provide them with a resource to extract and save the recipes 
 -   The objective of the Smooth-ez site is to keep content minimal at the start to avoid or minimise scope creep and stick to the fundamental
 purpose of what the site is for.  The site will be simplistic in it's layout and easy to navigate.  When users choose to upload their own submissions
 they will not be overwhelmed with content and will also have the option to include a url with an image of their drink.
+
+### Structure Plane
+
+-   
+
+### Skeleton Plane
+
+-   
+
+### Surface Plane
+
+-   
+
+##### [back to top](#table-of-contents)
+
+---
+
+# Features
+
+## Existing Features
+
+### Navigation
+
+-   The navig
