@@ -21,6 +21,8 @@ This website/project is the third Milestone Project in the Full Stack Web Develo
 * [**1.3 Structure Plane**](#structure-plane)
 * [**1.4 Skeleton Plane**](#skeleton-plane)
 * [**1.5 Surface Plane**](#surface-plane)
+    * [_Color Scheme_](color-scheme)
+    * [_Typography_](typography)
     </details>
 
 **<details><summary>Design Choices</summary>**
@@ -106,15 +108,42 @@ they will not be overwhelmed with content and will also have the option to inclu
 
 ### Structure Plane
 
--   
+-   The site is laid in an manner where the user the user will find ease of access to content with the Navbar placed across the top of each page
+with the Home, Categories, Login and Register Options.  The Categories menu will expand to allow the user to select an option they are looking for
+from Fruit, Vegetable, Dairy and Hot & Cold recipes.  The layout of the site should be intuitive, so it will lead the user to the options they
+are looking for.  There is a Search function on the Home and Category pages to allow users to narrow the choices they wish to browse for if needs
+be. The imagery and content of the site will flow in a consistent format so the user will have an understanding where they are at all times.
+
+******INSERT CONTENT HERE IN RELATION TO A 404 ERROR MESSAGE WHEN COMPLETING THIS SECTION OF THE SITE - REFER TO LMS VIDEO 2 OF 3 * * * * 
+
 
 ### Skeleton Plane
 
--   
+-   The content of the site allows users to progressively work their way through the content from the Homepage they can either Register as a 
+new user or login where they will be able to then select a specific category of smoothie they are searching for. They will also have the ability
+to enter and update their own recipes to make a contribution to the site.  In order to minimise users being overwhelmed with content, there will
+be a filter feature in order for users select just the recipes they wish to keep.  Attached is the Wireframe model of what the finished website
+will look like (click **[here](readme-wireframes.md)**  * * * * * INSERT WIREFRAME DOC HERE * * * * * the document will be reviewed throughout
+the project to review the navigation flow and to confirm if anything has been left out or whether anything needs to be removed or edited.
 
 ### Surface Plane
 
--   
+-   The selection of color, font and imagery was done in a way so that it projected a subtle feeling of health and wellbeing that is why the
+color of green was used.
+
+#### Color Scheme
+
+-   Colors were selected specifically to portray vibrant and healthy lifestyle engaging the user to browse the site for all content rather than
+just a particular category they may prefer.
+
+************************INSERT IMAGE OF COLOR PALETTE HERE FROM COOLORS.COM**************************
+
+#### Typography
+
+-   The Google Fonts library was used for the content of the site with the following fonts selected:
+    1. The "Finger Paint" option was used for the heading for an artistic look which will catch the users eye.
+    2. The "Merriweather" font was used for the main content of the site for it's neutral display and to avoid any confusion for the user.
+
 
 ##### [back to top](#table-of-contents)
 
@@ -124,6 +153,44 @@ they will not be overwhelmed with content and will also have the option to inclu
 
 ## Existing Features
 
-### Navigation
+**Homepage**
 
--   The navig
+-   The navigation menu will provide an underline prompting the user to click the icon if they wish to be directed to that particular page.
+-   The homepage is minimal in it's content providing a brief insight in to some of the benefits of healthy content of each of the drinks.
+-   The footer on each of the pages will have links to the social media platforms along with copyright details.
+-   There is a "Search" facility on the Homepage and Category Pages to assist the user with their purpose of their visit.
+
+**Register**
+
+-   Colors used on this page will be in line with what is reflected on the website, so as the user is not confused with where they are on the site.
+-   New users will complete the Registration form laid out on the page with all fields required for completion.
+-   Users will be prompted if they enter incorrect details by way of a pop up modal/sign in addition, they will receive a confirmation message when 
+registration is complete.
+
+**Profile**
+
+-   Once logged in the user will be able to view their Profile by accessing it on the Profile link on the navbar.
+-   Users will have the ability to edit or delete their profile and content by clicking on the buttons on their profile.
+-   Users will have the ability to select particular recipes and keep them as 'Favourites'.
+-   There will also be a feature to search from their profile page.
+
+**Login**
+
+-   Similar layout and content to the Registration page in order to prompt continuity across the website.
+-   Users will require to complete the form/details on the page with all fields required for completion.
+-   Users will be prompted if they enter incorrect details by way of a pop up modal/sign in addition, they will receive a confirmation
+message when login is complete.
+
+**Add Recipe**
+
+-   
+
+**Edit Recipe**
+
+-   
+
+**Search Recipe**
+
+-
+
+
