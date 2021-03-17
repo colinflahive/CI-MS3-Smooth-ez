@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Smoothies</title>
+</head>
+<body>
+    {% for smoothie in smoothies %}
+        {{ smoothie.smoothie_name }}<br>
+        {{ smoothie.category_name }}<br>
+        {{ smoothie._name }}<br>
+        {{ smoothie.benefits }}<br>
+
+    {% endfor %}
+</body>
+</html>
