@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 def get_smoothies():
     smoothies = mongo.db.smoothies.find()
-    return render_template("base.html", smoothies=smoothies)
+    return render_template("index.html", smoothies=smoothies)
 
 
 if __name__ == "__main__":

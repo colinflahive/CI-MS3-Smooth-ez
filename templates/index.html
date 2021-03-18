@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>I'm extending the base template</h2>
+    {% for smoothie in smoothies %}
+        {{ smoothie.smoothie_name }}<br>
+        {{ smoothie.category_name }}<br>
+        {{ smoothie.benefits }}<br>
+    {% endfor %}
+
+{% endblock %}

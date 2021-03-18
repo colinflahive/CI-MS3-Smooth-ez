@@ -6,11 +6,10 @@
     <title>My Smoothies</title>
 </head>
 <body>
-    {% for smoothie in smoothies %}
-        {{ smoothie.smoothie_name }}<br>
-        {{ smoothie.category_name }}<br>
-        {{ smoothie.benefits }}<br>
 
-    {% endfor %}
+    <h1>I'm part of the base template</h1>    
+    {% block content %}
+    {% endblock %}
+
 </body>
 </html>
