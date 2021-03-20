@@ -1,10 +1,58 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for smoothie in smoothies %}
-        {{ smoothie.smoothie_name }}<br>
-        {{ smoothie.category_name }}<br>
-        {{ smoothie.benefits }}<br>
-    {% endfor %}
+{% for smoothie in smoothies %}
+{{ smoothie.smoothie_name }}<br>
+{{ smoothie.category_name }}<br>
+{{ smoothie.benefits }}<br>
+
+<section id="site-tag">
+    <h2 id="banner">"Smooth-ez" - Your Smoothies Bible</h2>
+    <div id="left-text">
+        <div class="left-text-heading">
+            <h2>100% Natural</h2>
+            <hr>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book</p>
+        </div>
+        <div class="left-text-heading">
+            <h2>Always Fresh</h2>
+            <hr>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book</p>
+        </div>
+    </div>
+
+    <div id="right-text">
+        <div class="right-text-heading">
+            <h2>Organic Product</h2>
+            <hr>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book</p>
+    
+        </div>
+    
+        <div class="right-text-heading">
+            <h2>Best Quality</h2>
+            <hr>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book</p>
+        </div>
+    </div>
+
+    <div id="center-text">
+        <div id="square-container">
+            <div id="square-cover-bg"></div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endfor %}
 
 {% endblock %}
