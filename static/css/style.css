@@ -80,3 +80,64 @@ hr{
     height: 100%;
 
 }
+
+.social-icons i {
+  margin: 0px 10px;
+  width: 40px;
+  height: 40px;
+  background: #494848;
+  font-size: 20px;
+  padding: 10px 12px;
+  border-radius: 50%;
+}
+
+i.fa-facebook {
+  background: #5252b8;
+}
+
+i.fa-twitter {
+  background: #00acee;
+}
+
+i.fa-instagram {
+  background: #ebc803;
+}
+
+i.fa-google-plus {
+  background: #f56228;
+}
+
+i.fa-facebook:hover {
+  color: #5252b8;
+  background: #fafafa;
+  border: 1px solid #5252b8;
+}
+
+i.fa-twitter:hover {
+  color: #00acee;
+  background: #fafafa;
+  border: 1px solid #00acee;
+}
+
+i.fa-instagram:hover {
+  color: #ebc803;
+  background: #fafafa;
+  border: 1px solid #ebc803;
+}
+
+i.fa-google-plus:hover {
+  color: #f56228;
+  background: #fafafa;
+  border: 1px solid #f56228;
+}
+
+
+/*-------------------------Registration Page------------------*/
+
+
+.row .col.s8 {
+    width: 66.6666666667%;
+    margin-left: 16%;
+    left: auto;
+    right: auto;
+}
