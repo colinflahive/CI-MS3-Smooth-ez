@@ -108,7 +108,7 @@ def add_smoothie():
             "created_by": session["user"]
         }
         mongo.db.smoothies.insert_one(smoothie)
-        flash("Task Successfully Added")
+        flash("Smoothie Successfully Added")
         return redirect(url_for("get_smoothies"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)

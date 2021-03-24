@@ -8,7 +8,7 @@
     </div>
     <hr class="mb-5">
     <!-- Smoothie name input -->
-    <form method="POST" class="pb-5 smoothie-form" action="{{ url_for('add_smoothie') }}">
+    <form method="POST" class="smoothie-form" action="{{ url_for('add_smoothie') }}">
         <div class="form-group">
             <label for="smoothie_name">Smoothie Name</label>
             <input required type="text" class="form-control" id="smoothie_name" name="smoothie_name"
@@ -18,7 +18,7 @@
         <div class="form-group">
             <label for="category_name">Category</label>
             <select required name="category_name" id="category_name" class="form-control">
-                <option value="" selected disabled>Select Category</option>
+                <option value="" disabled selected>Select Category</option>
                 {% for category in categories %}
                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                 {% endfor %}
