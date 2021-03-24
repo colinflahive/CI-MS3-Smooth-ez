@@ -141,3 +141,16 @@ i.fa-google-plus:hover {
     left: auto;
     right: auto;
 }
+
+/*-------------------------Log In Page------------------------*/
+
+.card-panel {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    padding: 24px;
+    margin: 6.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+}
