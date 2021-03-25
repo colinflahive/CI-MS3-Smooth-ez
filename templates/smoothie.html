@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="row">
+    {% for category in categories %}
+    <form method="POST" class="smoothie-form" action="{{ url_for('smoothie') }}">
+
+    <input name="category" value="{{ category.category_name }}" class="hidden"/>
+    <!-- edit card from here -->
+    <div class="col s4 m4 offset-m2">
+        <div class="card-panel">
+            <a href="#" type="submit">
+                <h3 class="center-align light-blue-text text-darken-4">
+                    {{ category.category_name }}
+                </h3>
+                
+            </a>
+        </div>
+    </div>
+    <!-- edit above here -->
+    </form>
+    {% endfor %}
+</div>
+
+<div class="row">
+    <table class="striped">
+        <thead>
+            <tr>
+            {% for col in columns %}
+                <th>{{ col }}</th>
+            {% endfor %}
+            </tr>
+        </thead>
+        <tbody>    
+            {% for result in results %}
+                <tr>
+                    {% for res in result %}
+                    <td>{{ res }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

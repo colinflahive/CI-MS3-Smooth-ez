@@ -85,7 +85,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("add_smoothie.html", username=username)
 
     return redirect(url_for("login"))
 
@@ -98,21 +98,18 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_smoothie", methods=["GET", "POST"])
-def add_smoothie():
+@app.route("/smoothie", methods=["GET", "POST"])
+def smoothie():
     if request.method == "POST":
         smoothie = {
-            "category_name": request.form.get("category_name"),
-            "smoothie_name": request.form.get("smoothie_name"),
-            "benefits": request.form.get("benefits"),
-            "created_by": session["user"]
+            "category_name": request.form.get("category")
         }
-        mongo.db.smoothies.insert_one(smoothie)
-        flash("Smoothie Successfully Added")
+        mongo.db.smoothies.find(smoothie)
         return redirect(url_for("get_smoothies"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_smoothie.html", categories=categories)
+    return render_template("smoothie.html", categories=categories)
+
 
 @app.route("/get_categories")
 def get_categories():
