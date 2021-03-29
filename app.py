@@ -100,14 +100,17 @@ def logout():
 
 @app.route("/smoothie", methods=["GET", "POST"])
 def smoothie():
+    categories = mongo.db.categories.find().sort("category_name", 1)
     if request.method == "POST":
         smoothie = {
             "category_name": request.form.get("category")
         }
-        mongo.db.smoothies.find(smoothie)
-        return redirect(url_for("get_smoothies"))
-
-    categories = mongo.db.categories.find().sort("category_name", 1)
+        smoothies = mongo.db.smoothies.find(smoothie)
+        if type(smoothies[0]) == dict:
+            cols = smoothies[0].keys()
+            #   formatting required for front-end. Cols value to be a list.
+        else: cols=[]
+        return render_template("smoothie.html", categories=categories, results=smoothies, columns=cols)
     return render_template("smoothie.html", categories=categories)
 
 
