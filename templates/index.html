@@ -1,20 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for smoothie in smoothies %}
-{{ smoothie.smoothie_name }}<br>
-{{ smoothie.category_name }}<br>
-{{ smoothie.smoothie_img }}<br>
-{{ smoothie.smoothie_servings }}<br>
-{{ smoothie.smoothie_ingredients }}<br>
-{{ smoothie.smoothie_instructions }}<br>
-{{ smoothie.benefits }}<br>
-{{ smoothie.created_by }}<br>
-
 
 <!-- Code Institute Template Flask Framework Walkthrough Project -->
 <h2 id="banner">"Smooth-ez" - Your Smoothies Bible</h2>
-    
+    <!--Fruit-->
     <div class="row smoothiebio">
         <div class="col-md-7">
             <h3>Fruit</h3>
@@ -25,11 +15,16 @@
             printer took a galley of type and scrambled it to make a type specimen book</p>
         </div>
         <div class="col-md-5">
-            <img src="#" alt="fruit image">
+            <img src="static/assets/images/reg-page.jpg" class="responsive-img" height="50px" alt="fruit image">
         </div>
     </div>
+    <!--Vegetable-->
     <div class="row smoothiebio">
         <div class="col-md-5">
+            <img src="static/assets/images/reg-page.jpg" alt="vegetable image">
+        </div>
+
+        <div class="col-md-7">
             <h3>Vegetable</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
@@ -37,12 +32,11 @@
             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
             printer took a galley of type and scrambled it to make a type specimen book</p>
         </div>
-        <div class="col-md-7">
-            <img src="#" alt="vegetable image">
-        </div>
+        
     </div>
+    <!--Dairy-->
     <div class="row smoothiebio">
-        <div class="col-md-5">
+        <div class="col-md-7">
             <h3>Dairy</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
@@ -50,12 +44,17 @@
             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
             printer took a galley of type and scrambled it to make a type specimen book</p>
         </div>
-        <div class="col-md-7">
-            <img src="#" alt="dairy image">
+        <div class="col-md-5">
+            <img src="static/assets/images/reg-page.jpg" alt="dairy image">
         </div>
     </div>
+
+    <!--Hot & Cold-->
 <div class="row smoothiebio">
-        <div class="col-md-5">
+    <div class="col-md-5">
+            <img src="static/assets/images/reg-page.jpg" alt="hot & frozen image">
+        </div>
+        <div class="col-md-7">
             <h3>Hot & Frozen</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
@@ -63,12 +62,7 @@
             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
             printer took a galley of type and scrambled it to make a type specimen book</p>
         </div>
-        <div class="col-md-7">
-            <img src="#" alt="hot & frozen image">
-        </div>
+        
     </div>
-
-
-{% endfor %}
 
 {% endblock %}
