@@ -102,7 +102,23 @@ hr{
     right: auto;
 }
 
+.form-panel {
+    background-color: white;
+    padding: 20px;
+    opacity: 0.9;
+    color: black;
+}
 
+.input-field label{
+    color: darkslategrey;
+}
+
+.background-img-panel {
+    background-image: url("/static/assets/images/reg-page.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 /*-------------------------Log In Page------------------------*/
 .card-form {
@@ -144,8 +160,37 @@ img {
     height: 100%;
 }
 
+.background-img-login {
+    background-image: url("/static/assets/images/login-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /*-------------------------Smoothie.html------------------------*/
 
 .hidden {
     display: none;
+}
+
+
+/*------------------------- Media Query ------------------------*/
+
+@media only screen and (max-width: 600px){
+
+.background-img-panel {
+    /* background-image: url("/static/assets/images/reg-page.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    padding: 0 !important;
+
+}
+.background-img-login {
+    /* background-image: url("/static/assets/images/login-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center; */
+    background-size: cover;
+    padding: 0 !important;
+}
 }
