@@ -2,40 +2,54 @@
 {% block content %}
 
 <div class="row">
-    {% for category in categories %}
-    <form method="POST" class="smoothie-form" action="{{ url_for('smoothie') }}">
+    {% for number in range(2) %}
+    <div class="col l6 m6 s6">
 
-        <input name="category" value="{{ category.category_name }}" class="hidden" />
+        {% if number == 0 %}
+        {% set category_list=categories[:2] %}
+        {% else %}
+        {% set category_list=categories[2:] %}
+        {% endif %}
         
-<!-- edit card from here -->
 
-        <div class="container">
-            <div class="row">
-                <div class="col l4 m4 s12">
-                    <div class="card sticky-action">
-                        <div class="card-image">
-                            <img src="{{ category.img }}" class="materialboxed">
-                            <span class="card-title">{{ category.category_name }}</span>
-                            <a class="btn red btn-floating halfway-fab pulse activator">+</a>
+        {% for category in category_list %}
+
+
+        <form method="POST" class="smoothie-form" action="{{ url_for('smoothie') }}">
+
+            <input name="category" value="{{ category.category_name }}" class="hidden" />
+
+            <!-- edit card from here -->
+
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col l4 m4 s12"></div> -->
+                        <div class="card sticky-action">
+                            <div class="card-image">
+                                <img src="{{ category.img }}" class="materialboxed">
+                                <span class="card-title">{{ category.category_name }}</span>
+                                <a class="btn red btn-floating halfway-fab pulse activator">+</a>
+                            </div>
+                            <div class="card-content">
+                                <p>{{ category.content }}</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-description">{{ category.category_name }}<i class="right">x</i></span>
+                                <p>{{ category.description }}</p>
+                            </div>
+                            <div class="card-action">
+                                <input type="submit" value="Submit" />
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p>{{ category.content }}</p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-description">{{ category.category_name }}<i class="right">x</i></span>
-                            <p>{{ category.description }}</p>
-                        </div>
-                        <div class="card-action">
-                            <input type="submit" value="Submit" />
-                        </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
+
+
+            <!-- edit above here -->
+        </form>
+        {% endfor %}
         </div>
-
-
-        <!-- edit above here -->
-    </form>
     {% endfor %}
 </div>
 
@@ -51,10 +65,10 @@
         <tbody>
             {% for result in results %}
             <tr>
-                <!-- for cols in the smoothie table add a <td> referencing the col name of the result row. -->   
-                
-                <td>{{ result.smoothie_name }}</td>
-                
+                <!-- for cols in the smoothie table add a <td> referencing the col name of the result row. -->
+
+                <td>{{ result.category_name }}</td>
+                    <td>{{ result.smoothie_name }}</td>
             </tr>
             {% endfor %}
         </tbody>

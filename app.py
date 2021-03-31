@@ -98,9 +98,25 @@ def logout():
     return redirect(url_for("login"))
 
 
+def format_columns(columns):
+    output = []
+    for string in columns:
+        string = string.split("_")
+        string_list = []
+        for word in string:
+            if word != "id":
+                word = word.title()
+                string_list.append(word)
+        final_column = " ".join(string_list)
+        if len(final_column) > 0:
+            output.append(final_column)
+    return output
+
+
 @app.route("/smoothie", methods=["GET", "POST"])
 def smoothie():
     categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = list(categories)
     if request.method == "POST":
         smoothie = {
             "category_name": request.form.get("category")
@@ -109,8 +125,12 @@ def smoothie():
         if type(smoothies[0]) == dict:
             cols = smoothies[0].keys()
             #   formatting required for front-end. Cols value to be a list.
-        else: cols=[]
-        return render_template("smoothie.html", categories=categories, results=smoothies, columns=cols)
+            cols = format_columns(cols)
+        else:
+            cols = []
+        return render_template(
+            "smoothie.html", categories=categories,
+            results=smoothies, columns=cols)
     return render_template("smoothie.html", categories=categories)
 
 
