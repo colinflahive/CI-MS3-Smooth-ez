@@ -5,8 +5,13 @@
     <div class="col s12 m8 offset-m2">
         <div class="card-panel">
             <h3 class="center-align light-blue-text text-darken-4">
-                {{ username }}'s Profile
-            </h3>                
+                {{ user.username|title }}'s Profile
+            </h3>
+            <p>{{ user.firstname|title }}{{ user.lastname|title }}</p>
+            <p>{{ user.email }}</p>
+
+            <form method="post" action="{{ url_for('delete_profile', username=user.username|lower)}}"><button data-toggle="modal" data-target="#delete_profile" class="btn btn-danger my-3">Delete Profile</button></form>
+            <form><a href="{{ url_for('edit_profile', username=user.username|lower)}}" class="btn btn-success my-3">Edit Profile</a></form>                
         </div>
     </div>
 </div>

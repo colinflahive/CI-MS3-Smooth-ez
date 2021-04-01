@@ -37,6 +37,9 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
+            "firstname": request.form.get("firstname"),
+            "lastname": request.form.get("lastname"),
+            "email": request.form.get("email").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
@@ -78,16 +81,53 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST", "DELETE"])
 def profile(username):
+    if request.method == "GET":
     # grab the user's username from the db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+        user = mongo.db.users.find_one(
+            {"username": session["user"]})
+    # username = mongo.db.users.find_one(
+    #     {"username": session["user"]})["username"]
 
-    if session["user"]:
-        return render_template("add_smoothie.html", username=username)
+        if session["user"]:
+            return render_template("add_smoothie.html", user=user)
 
-    return redirect(url_for("login"))
+        return redirect(url_for("login"))
+
+
+@app.route("/delete/<username>", methods=["POST"])
+def delete_profile(username):
+    if request.method == "POST":
+        mongo.db.users.delete_one(
+            {"username": session["user"]})
+        session["user"] = None
+        return render_template("delete.html")
+
+
+@app.route("/edit_profile/<username>", methods=["GET", "POST"])
+def edit_profile(username):
+    if request.method == "POST":
+        # to check if the username already exists in the db
+
+        edit_profile = {
+            "firstname": request.form.get("firstname"),
+            "lastname": request.form.get("lastname"),
+            "email": request.form.get("email").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.update_one({"username": username},
+        {"$set": edit_profile})
+
+        # put the new user in to 'session' cookie
+        return redirect(url_for("profile", username=session["user"]))
+
+    elif request.method == "GET":
+        user = mongo.db.users.find_one(
+            {"username": username})
+
+        if user:
+            return render_template("edit_profile.html", user=user)
 
 
 @app.route("/logout")
