@@ -13,6 +13,13 @@ body{
 
 /*-------------------------Home Page------------------*/
 
+#homepage-header {
+    height: 50vh;
+    background: url("/static/assets/images/home.jpg");
+    background-size: cover;
+    display: flex;
+}
+
 .col-md-5 img{
     width: 100%;    
 }

@@ -14,11 +14,13 @@
     {% block styles %}
     {% endblock %}
     <title>Smooth-ez</title>
+     
 </head>
 
 <body>
     <header>
         <!-- Main Navbar -->
+        <div class="navbar-fixed">
         <nav class="green darken-2">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_smoothies')}}" class="brand-logo">Smooth-ez</a>
@@ -39,7 +41,7 @@
                 </ul>
             </div>
         </nav>
-
+    </div>
         <!-- Mobile Side Navbar -->
         <ul class="sidenav" id="mobile-demo">
             <li>
